@@ -1,0 +1,21 @@
+$Global
+    Aniso=.f., nStep=10000, nSave=1000, nAdaptStep=500, 
+    Debug=.f., CFL=0.5, NRR=.f., Chimera=.f., 
+    Limiter=1, Restart=.f., 
+    NameStr= './Data/test',
+$END
+
+$Mesh
+    nCellx=20, nCelly=20, nCellz=20, 
+    DomainX=10.0, DomainY=10.0, DomainZ=10.0, InitRefineLVL=5, AdaptRefineLVL=5,
+$END
+
+$NRRset
+    NRRSeed=1, NRRLength=1, NRRTheta=1,
+$END
+
+$Inflow
+    Alpha=0.0, Beta=0.0, ReyNum=2e-5, 
+    T00=300.0, Mach00=1.7, Gama00=1.4,
+$END
+!!---- Must retain the last row ----!!
